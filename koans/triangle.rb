@@ -14,7 +14,13 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  if a == b && b == c
+    :equilateral
+  elsif (a == c && a != b) || (c == b && c != a) || (b == a && b != c)
+    :isosceles
+  elsif (a != b && a != c) || (b != a && b != c) || (c != a && c != b)
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
